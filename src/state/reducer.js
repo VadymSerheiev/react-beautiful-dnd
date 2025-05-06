@@ -112,9 +112,7 @@ export default (state: State = idle, action: Action): State => {
     };
 
     // Can only auto scroll the window if every list is not fixed on the page
-    const isWindowScrollAllowed: boolean = toDroppableList(
-      dimensions.droppables,
-    ).every((item: DroppableDimension) => !item.isFixedOnPage);
+    const isWindowScrollAllowed: boolean = false;
 
     const { impact, afterCritical } = getLiftEffect({
       draggable,
